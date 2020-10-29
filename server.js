@@ -1,7 +1,7 @@
 // Dependencies
 const express = require("express");
 const path = require("path");
-const { getNotesData, addNote, getNewId } = require("./lib/notes");
+const { getNotesData, addNote, getNewId, deleteNote } = require("./lib/notes");
 
 // Sets up the Express App
 const app = express();
@@ -34,7 +34,10 @@ app.post("/api/notes", function(req, res) {
 });
 
 
-
+app.post("/api/notes/:id", function(req, res) {
+	deleteNote(req.params.id);
+	res.json(getNotesData());
+});
 
 // Default route. Sends the home page.
 app.get("*", function(req, res) {
