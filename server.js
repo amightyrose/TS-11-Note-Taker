@@ -1,7 +1,7 @@
 // Dependencies
 const express = require("express");
 const path = require("path");
-const { getNotesData, addNote, getNewId } = require("./lib/notesData");
+const { getNotesData, addNote, getNewId } = require("./lib/notes");
 
 // Sets up the Express App
 const app = express();
