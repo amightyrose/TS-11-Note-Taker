@@ -129,6 +129,7 @@ const renderNoteList = (notes) => {
 
   notes.forEach((note) => {
     const $li = create$li(note.title).data(note);
+    $li.attr("data-id", note.id);
     noteListItems.push($li);
   });
 

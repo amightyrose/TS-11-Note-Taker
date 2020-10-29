@@ -1,7 +1,7 @@
 // Dependencies
 const express = require("express");
 const path = require("path");
-const { arrNotesData, addNote } = require("./lib/notesData");
+const { getNotesData, addNote, getNewId } = require("./lib/notesData");
 
 // Sets up the Express App
 const app = express();
@@ -24,13 +24,13 @@ app.get("/notes", function(req, res) {
 
 
 app.get("/api/notes", function(req, res) {
-	res.json(arrNotesData);
+	res.json(getNotesData());
 });
 
 
 app.post("/api/notes", function(req, res) {
-	addNote(req.body);
-	res.json(arrNotesData);
+	addNote(req.body, getNewId());
+	res.json(getNotesData());
 });
 
 
