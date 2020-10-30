@@ -4,6 +4,7 @@
   "description": "A web application for taking and storing notes.",
   "main": "server.js",
   "scripts": {
+    "start": "server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
