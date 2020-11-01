@@ -4,6 +4,8 @@
 ## Description
 A web application for taking and saving notes. Runs on node/express.
 
+Try the application here: <https://fathomless-spire-19401.herokuapp.com/>
+
 
 ## Table of Contents
 * [Installation](#installation)
